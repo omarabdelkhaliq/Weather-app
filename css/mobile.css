@@ -1,0 +1,93 @@
+/* ==========================================
+   Responsive Design for Mobile Devices
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* 1. ضبط الحاوية الرئيسية */
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* 2. ضبط الهيدر وشعار الموقع */
+    nav {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    /* 3. العنوان الرئيسي */
+    .title {
+        padding-bottom: 24px;
+    }
+
+    .title h1 {
+        font-size: 28px;
+    }
+
+    /* 4. قسم البحث (تنزيل الزر تحت الـ Input) */
+    .search {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .search button {
+        width: 100%;
+    }
+
+    /* 5. ترتيب الشاشة كعمود واحد */
+    .weather-layout {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    /* 6. كارت الطقس الحالي */
+    .current-weather {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 24px 20px;
+    }
+
+    .temp-info span {
+        font-size: 52px;
+    }
+
+    /* 7. صناديق التفاصيل (Feels like, Humidity, etc.) -> 2 في كل صف */
+    .weather-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* 8. التوقعات اليومية (Daily Forecast) -> 3 في كل صف */
+    .daily-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    /* 9. قسم التوقعات بالساعة */
+    .weather-right {
+        padding: 16px;
+    }
+
+    .hourly-header h3 {
+        font-size: 16px;
+    }
+
+    .day-select {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+}

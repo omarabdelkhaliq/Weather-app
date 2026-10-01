@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css">
+  </head>
+  <body>
+    <!-- start nav -->
+    <nav class="container">
+      <div class="logo">
+        <img src="img/logo.svg" alt="logo img" />
+      </div>
+
+      <div class="unit">
+        <div class="unit-btn">
+          <img src="img/icon-units.svg" alt="setting img" />
+          <span>Units</span>
+          <img src="img/icon-dropdown.svg" alt="more img" />
+        </div>
+
+        <div class="dropdown-menu">
+          <button class="switch-btn">Switch to Imperial</button>
+          <div class="dropdown-section">
+            <span class="section-title">Temperature</span>
+            <div class="option active">
+              <span>Celsius (°C)</span>
+              <span class="checkmark">✓</span>
+            </div>
+            <div class="option">
+              <span>Fahrenheit (°F)</span>
+            </div>
+          </div>
+          <div class="dropdown-section">
+            <span class="section-title">Wind Speed</span>
+            <div class="option active">
+              <span>km/h</span>
+              <span class="checkmark">✓</span>
+            </div>
+            <div class="option">
+              <span>mph</span>
+            </div>
+          </div>
+          <div class="dropdown-section">
+            <span class="section-title">Precipitation</span>
+            <div class="option active">
+              <span>Millimeters (mm)</span>
+              <span class="checkmark">✓</span>
+            </div>
+            <div class="option">
+              <span>Inches (in)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end nav -->
+
+    <!-- start main -->
+    <div class="main container">
+      <div class="title">
+        <h1>How's the sky looking today?</h1>
+      </div>
+      <div class="search">
+        <div class="input">
+          <img
+            src="img/icon-search.svg"
+            alt="search icon"
+            class="search-icon"
+          />
+          <input type="text" id="search" placeholder="Search for a place..." />
+        </div>
+        <button type="submit" id="searchBtn">Search</button>
+      </div>
+        <p id="searchStatus" class="search-status"></p>
+        <div class="state-message" id="stateMessage"></div>
+      <!-- start weather layout (main card + hourly sidebar) -->
+      <div class="weather-layout" id="weatherResult">
+        <!-- start left column -->
+        <div class="weather-left">
+          <div class="current-weather">
+            <div class="location-info">
+              <h2 id="cityName">-</h2>
+              <p id="dateNow">-</p>
+            </div>
+            <div class="temp-info">
+              <img src="img/icon-sunny.webp" alt="weather icon" id="weatherIcon" />
+              <span id="temp">--°</span>
+            </div>
+          </div>
+
+          <div class="weather-details">
+            <div class="detail-box">
+              <p>Feels Like</p>
+              <h3 id="feelsLike">--°</h3>
+            </div>
+            <div class="detail-box">
+              <p>Humidity</p>
+              <h3 id="humidity">--%</h3>
+            </div>
+            <div class="detail-box">
+              <p>Wind</p>
+              <h3 id="wind">-- km/h</h3>
+            </div>
+            <div class="detail-box">
+              <p>Precipitation</p>
+              <h3 id="precip">-- mm</h3>
+            </div>
+          </div>
+
+          <!-- start daily forecast -->
+          <div class="daily-forecast">
+            <h3>Daily forecast</h3>
+            <div class="daily-list" id="dailyList">
+            </div>
+          </div>
+          <!-- end daily forecast -->
+        </div>
+        <!-- end left column -->
+        <!-- start hourly sidebar -->
+        <div class="weather-right">
+          <div class="hourly-header">
+            <h3>Hourly forecast</h3>
+            <div class="day-select">
+              <span id="selectedDay">Today</span>
+              <img src="img/icon-dropdown.svg" alt="dropdown" />
+            </div>
+          </div>
+          <div class="hourly-list" id="hourlyList">
+          </div>
+        </div>
+        <!-- end hourly sidebar -->
+      </div>
+      <!-- end weather layout -->
+    </div>
+    <!-- end main -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
