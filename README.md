@@ -2,6 +2,10 @@
 
 A weather application that allows users to check weather information for different locations through a simple and user-friendly interface.
 
+## 📸 Screenshot
+
+![Weather App Screenshot](./weather.png)
+
 ## 🚀 Live Demo
 
 [View the Live Demo](https://omarabdelkhaliq.github.io/Weather-app/)
